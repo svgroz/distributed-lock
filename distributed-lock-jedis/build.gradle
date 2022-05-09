@@ -1,0 +1,18 @@
+plugins {
+    id 'java-library'
+}
+
+dependencies {
+    api(project(":distributed-lock-core"))
+
+    api "org.slf4j:slf4j-api:${sl4jVersion}"
+    api "redis.clients:jedis:${jedisVersion}"
+
+    testImplementation "ch.qos.logback:logback-classic:${logbackVersion}"
+    testImplementation "org.junit.jupiter:junit-jupiter-api:${junitVersion}"
+    testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:${junitVersion}"
+}
+
+test {
+    useJUnitPlatform()
+}

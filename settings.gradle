@@ -1,0 +1,4 @@
+rootProject.name = 'distributed-lock'
+include 'distributed-lock-core'
+include 'distributed-lock-jedis'
+
